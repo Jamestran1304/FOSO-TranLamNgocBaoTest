@@ -17,22 +17,24 @@ function cartReducer(state, action) {
       }
       return { ...state, items, open: true };
     }
-    case 'REMOVE':
-      return { ...state, items: state.items.filter((i) => i.id !== action.id) };
-    case 'INCREMENT':
-      return {
-        ...state,
-        items: state.items.map((i) =>
-          i.id === action.id ? { ...i, qty: (i.qty || 1) + 1 } : i,
-        ),
-      };
-    case 'DECREMENT':
-      return {
-        ...state,
-        items: state.items.map((i) =>
+    case 'REMOVE': {
+      const items = state.items.filter((i) => i.id !== action.id);
+      return { ...state, items };
+    }
+    case 'INCREMENT': {
+      const items = state.items.map((i) =>
+        i.id === action.id ? { ...i, qty: (i.qty || 1) + 1 } : i,
+      );
+      return { ...state, items };
+    }
+    case 'DECREMENT': {
+      const items = state.items
+        .map((i) =>
           i.id === action.id ? { ...i, qty: Math.max(1, (i.qty || 1) - 1) } : i,
-        ),
-      };
+        )
+        .filter((i) => i.qty > 0);
+      return { ...state, items };
+    }
     case 'OPEN_CONFIRM':
       return { ...state, confirmOpen: true };
     case 'CLOSE_CONFIRM':

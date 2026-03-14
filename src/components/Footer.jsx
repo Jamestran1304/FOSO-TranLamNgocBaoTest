@@ -2,47 +2,93 @@ import React from 'react';
 
 export default function Footer() {
   return (
-    <footer id='footer' className='mt-8 border-t'>
-      <div className='container mx-auto px-6 py-8 grid md:grid-cols-3 gap-6'>
-        <div>
-          <div className='flex items-center gap-3 mb-2'>
-            <div className='w-10 h-10 rounded-full bg-gray-800 text-white flex items-center justify-center font-semibold'>
-              OM
+    <footer className='mt-12 bg-[#22180f] text-white'>
+      <div className='container mx-auto px-6 py-12'>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-8 items-start'>
+          {/* left: logo and brand */}
+          <div>
+            <div className='flex items-center gap-4'>
+              <div className='w-14 h-14 rounded-full bg-white/5 flex items-center justify-center'>
+                {/* emblem placeholder */}
+                <span className='text-sm font-medium'>OM</span>
+              </div>
+              <div>
+                <div className='text-xl font-medium'>THE OM</div>
+                <div className='text-sm text-white/70'>LOUNGE</div>
+              </div>
             </div>
-            <div>
-              <div className='text-sm font-semibold'>THE OM LOUNGE</div>
-              <div className='text-xs text-gray-600'>Nails & Spa</div>
+
+            <div className='flex items-center gap-4 mt-6'>
+              <a href='#' className='text-white/70 hover:text-white'>
+                f
+              </a>
+              <a href='#' className='text-white/70 hover:text-white'>
+                t
+              </a>
+              <a href='#' className='text-white/70 hover:text-white'>
+                ig
+              </a>
             </div>
           </div>
-          <p className='text-sm text-gray-600'>
-            Không gian thư giãn dành cho bạn. Hãy đặt lịch để trải nghiệm dịch
-            vụ chuyên nghiệp.
-          </p>
-        </div>
 
-        <div>
-          <ul className='space-y-2 text-sm text-gray-700'>
-            <li className='font-semibold'>Menu</li>
-            <li>Trang chủ</li>
-            <li>Giới thiệu</li>
-            <li>Dịch vụ</li>
-            <li>Tin tức</li>
-          </ul>
-        </div>
+          {/* center: nav columns */}
+          <div className='flex justify-center'>
+            <div className='grid grid-cols-2 gap-8'>
+              <div>
+                <ul className='space-y-3 text-white/70'>
+                  <li className='text-xs uppercase tracking-wider text-white/40'>
+                    Sitemap
+                  </li>
+                  <li>
+                    <a href='#' className='hover:underline'>
+                      Trang chủ
+                    </a>
+                  </li>
+                  <li>
+                    <a href='#' className='hover:underline'>
+                      Giới thiệu
+                    </a>
+                  </li>
+                  <li>
+                    <a href='#' className='hover:underline'>
+                      Dịch vụ
+                    </a>
+                  </li>
+                </ul>
+              </div>
 
-        <div className='text-sm text-gray-700'>
-          <div className='mb-1 font-semibold'>Liên hệ</div>
-          <div>+84 90 123 4567</div>
-          <div className='mt-3'>
-            <div className='font-semibold'>Giờ làm việc</div>
-            <div className='text-sm'>T2 - T6: 09:00 - 19:00</div>
-            <div className='text-sm'>T7 - CN: 09:00 - 17:00</div>
+              <div>
+                <ul className='space-y-3 text-white/70'>
+                  <li className='text-xs uppercase tracking-wider text-white/40'>
+                    Liên hệ
+                  </li>
+                  <li className='text-sm'>+84 89 812 12 97</li>
+                  <li className='text-sm'>6 Đường G, Phú Mỹ, Quận 7</li>
+                  <li className='text-sm'>TP Hồ Chí Minh</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* right: contact + CTA */}
+          <div className='flex flex-col items-end'>
+            <div className='text-sm text-white/70 mb-4'>
+              Thứ2 - Thứ6: 09:00 - 19:00
+              <br />
+              Thứ7 - Chủ nhật: 09:00 - 20:00
+            </div>
+
+            <div className='mt-auto'>
+              <button className='rounded-full border border-yellow-400 px-10 py-4 text-sm text-yellow-300 hover:bg-yellow-400/5 transition'>
+                Đặt lịch ngay
+              </button>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div className='text-center py-4 text-sm text-gray-600'>
-        © 2026 The OM Lounge — All rights reserved
+        <div className='mt-8 text-xs text-white/50 text-right'>
+          © 2025 — Copyright The OM Lounge. All rights reserved.
+        </div>
       </div>
     </footer>
   );
