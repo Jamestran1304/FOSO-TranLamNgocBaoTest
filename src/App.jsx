@@ -48,10 +48,16 @@ export default function App() {
 
   return (
     <CartProvider>
-      <div className="min-h-screen bg-[url('/service.png')] bg-cover bg-center text-white">
-        <div className='backdrop-blur-sm bg-gradient-to-b from-black/40 via-transparent to-brand-900/60'>
-          <Header />
-          <main className='container mx-auto px-6 py-12'>
+      <div className='min-h-screen text-white bg-brand-900'>
+        {/* Global background: image + continuous brand gradient for “liền lạc” feel */}
+        <div className='relative'>
+          <div className='absolute inset-0 bg-[url("/service.png")] bg-cover bg-center opacity-60' />
+          <div className='absolute inset-0 bg-gradient-to-b from-brand-800/70 via-brand-700/35 to-brand-900/95' />
+          <div className='absolute inset-0 bg-[radial-gradient(80%_60%_at_50%_0%,rgba(236,220,203,0.14)_0%,rgba(58,34,20,0)_55%)]' />
+
+          <div className='relative backdrop-blur-[2px]'>
+            <Header />
+            <main className='container mx-auto px-6 py-10'>
             <section className='mb-10'>
               <h2 className='text-5xl font-light text-center mb-2'>Dịch Vụ</h2>
               <p className='text-center text-sm text-white/70'>
@@ -59,7 +65,7 @@ export default function App() {
               </p>
             </section>
 
-            <section className='flex flex-col md:flex-row items-center justify-between gap-4 mb-8'>
+            <section className='flex flex-col md:flex-row items-center justify-between gap-4'>
               <div className='flex gap-3 overflow-x-auto pb-2'>
                 {services.map((c) => (
                   <button
@@ -97,7 +103,7 @@ export default function App() {
             )}
 
             {!loading && !error && (
-              <div className='space-y-8'>
+              <div className='space-y-10'>
                 {filtered
                   .filter((c) =>
                     activeCategory ? c.id === activeCategory : true,
@@ -120,7 +126,8 @@ export default function App() {
 
             {/* Footer */}
             <Footer />
-          </main>
+            </main>
+          </div>
         </div>
 
         <CartPanel />

@@ -55,7 +55,7 @@ export default function Testimonials() {
   const idx = (offset) => (active + offset + n) % n;
 
   return (
-    <section className='mt-16 mb-20'>
+    <section className='mt-0 mb-0'>
       <div
         className='relative'
         onMouseEnter={() => setIsPaused(true)}
@@ -63,30 +63,30 @@ export default function Testimonials() {
       >
         {/* Background */}
         <div
-          className='w-full h-[560px] md:h-[600px] bg-cover bg-center rounded overflow-hidden'
+          className='w-full h-[620px] md:h-[660px] bg-cover bg-center overflow-hidden'
           style={{ backgroundImage: "url('/assets/reviews.png')" }}
         />
 
         {/* Overlay and content */}
         <div className='absolute inset-0 flex flex-col items-center'>
           <div className='pt-12 text-center z-10'>
-            <div className='text-sm text-brand-200 tracking-widest mb-2'>
+            <div className='text-xs md:text-sm text-brand-200 tracking-[0.3em] mb-1 uppercase'>
               NHẬN XÉT TỪ
             </div>
-            <h3 className='text-4xl md:text-5xl font-light text-brand-50 mb-8'>
+            <h3 className='text-[32px] md:text-[40px] font-light text-brand-50 mb-6 leading-tight'>
               Khách Hàng
             </h3>
           </div>
 
           <div className='container mx-auto px-6 z-10'>
-            <div className='relative -mt-2 md:-mt-4'>
+            <div className='relative mt-4 md:mt-6'>
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6 items-end'>
                 {[-1, 0, 1].map((offset) => {
                   const t = TESTIMONIALS[idx(offset)];
                   const isCenter = offset === 0;
                   const cardClass = isCenter
-                    ? 'translate-y-0 scale-105 z-20'
-                    : 'translate-y-6 scale-95 opacity-90 z-10';
+                    ? 'translate-y-0 scale-[1.02] z-20'
+                    : 'translate-y-4 scale-[0.96] opacity-90 z-10';
                   const w = isCenter ? 'w-80 md:w-96' : 'w-64 md:w-64';
 
                   return (
@@ -121,7 +121,7 @@ export default function Testimonials() {
                               </div>
                             </div>
                           </div>
-                          <p className='mt-3 text-sm text-brand-200'>
+                          <p className='mt-3 text-sm text-brand-200 leading-relaxed'>
                             {isCenter ? t.text : t.text.slice(0, 120) + '...'}
                           </p>
                         </div>
@@ -131,20 +131,10 @@ export default function Testimonials() {
                 })}
               </div>
 
-              <div className='mt-8 flex items-center justify-center gap-3'>
-                {TESTIMONIALS.map((_, i) => (
-                  <button
-                    key={i}
-                    onClick={() => setActive(i)}
-                    aria-label={`Go to testimonial ${i + 1}`}
-                    className={`w-3 h-3 rounded-full transition ${i === active ? 'bg-brand-50' : 'bg-brand-50/30'}`}
-                  />
-                ))}
-              </div>
             </div>
           </div>
 
-          <div className='absolute inset-0 bg-gradient-to-b from-transparent to-brand-900/35'></div>
+          <div className='absolute inset-0 bg-gradient-to-b from-transparent to-brand-900/40'></div>
         </div>
       </div>
     </section>

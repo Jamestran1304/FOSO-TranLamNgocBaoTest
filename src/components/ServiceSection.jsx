@@ -1,8 +1,10 @@
 import React from 'react';
 import ServiceCard from './ServiceCard';
+import { useCartDispatch } from '../context/CartContext';
 
 export default function ServiceSection({ category, index = 0 }) {
   const reverse = index % 2 === 1;
+  const dispatch = useCartDispatch();
 
   return (
     <section className='grid md:grid-cols-2 gap-8 items-start'>
@@ -17,7 +19,18 @@ export default function ServiceSection({ category, index = 0 }) {
         <ul className='space-y-4'>
           {category.items.map((s) => (
             <li key={s.id}>
-              <ServiceCard item={s} />
+              <ServiceCard
+                item={s}
+                onBook={(item) =>
+                  dispatch({
+                    type: 'ADD',
+                    item: {
+                      ...item,
+                      image: category.image,
+                    },
+                  })
+                }
+              />
             </li>
           ))}
         </ul>

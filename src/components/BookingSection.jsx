@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function BookingSection() {
   return (
-    <section id='booking' className='mt-16'>
+    <section id='booking' className='mt-0'>
       <div className='w-full rounded overflow-hidden relative'>
         <img
           src='/assets/booking.png'
