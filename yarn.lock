@@ -504,7 +504,7 @@
     "@tailwindcss/oxide-win32-arm64-msvc" "4.2.1"
     "@tailwindcss/oxide-win32-x64-msvc" "4.2.1"
 
-"@tailwindcss/postcss@^4.2.1":
+"@tailwindcss/postcss@4.2.1":
   version "4.2.1"
   resolved "https://registry.yarnpkg.com/@tailwindcss/postcss/-/postcss-4.2.1.tgz#efce3b23608b23324ed4848ff1aae657adfe0c5f"
   integrity sha512-OEwGIBnXnj7zJeonOh6ZG9woofIjGrd2BORfvE5p9USYKDCZoQmfqLcfNiRWoJlRWLdNPn2IgVZuWAOM4iTYMw==
