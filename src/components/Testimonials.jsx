@@ -61,7 +61,6 @@ export default function Testimonials() {
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
       >
-        {/* Background */}
         <div
           className='w-full h-[620px] md:h-[660px] bg-cover bg-center overflow-hidden'
           style={{ backgroundImage: "url('/assets/reviews.png')" }}

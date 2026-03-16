@@ -10,7 +10,6 @@ export default function BookingSection() {
           className='w-full h-96 md:h-[420px] object-cover'
         />
 
-        {/* warm gold overlay */}
         <div className='absolute inset-0 bg-gradient-to-b from-brand-700/55 to-brand-900/55'></div>
 
         <div className='absolute inset-0 flex flex-col items-center justify-center text-center px-6'>
@@ -24,7 +23,6 @@ export default function BookingSection() {
           </p>
 
           <div className='flex gap-3'>
-            {/* Primary CTA: scroll to footer */}
             <button
               onClick={() => {
                 const el = document.getElementById('footer');
@@ -36,7 +34,6 @@ export default function BookingSection() {
               TRẢI NGHIỆM NGAY
             </button>
 
-            {/* Secondary CTA: scroll to footer as well (keeps behavior consistent) */}
             <button
               onClick={() => {
                 const el = document.getElementById('footer');

@@ -38,7 +38,6 @@ export default function CartPanel() {
         state.open ? 'pointer-events-auto' : 'pointer-events-none'
       }`}
     >
-      {/* backdrop */}
       <div
         className={`flex-1 bg-black/40 transition-opacity ${
           state.open ? 'opacity-100' : 'opacity-0'
@@ -46,7 +45,6 @@ export default function CartPanel() {
         onClick={() => dispatch({ type: 'SET_OPEN', open: false })}
       />
 
-      {/* side panel */}
       <div
         className={`relative h-full w-[360px] md:w-[400px] bg-[#FFF6EB] text-brand-900 shadow-2xl transform transition-transform duration-300 ${
           state.open ? 'translate-x-0' : 'translate-x-full'
@@ -150,8 +148,7 @@ export default function CartPanel() {
               ))
             )}
           </div>
-
-          {/* technician + total */}
+          
           <div className='px-6 py-4 border-t border-white/50 bg-[#FDF0E0] space-y-3'>
             <div className='flex items-center justify-between text-xs text-[#9A826A]'>
               <span>Kỹ thuật viên</span>

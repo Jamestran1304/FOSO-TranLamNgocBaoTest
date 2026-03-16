@@ -55,14 +55,12 @@ export default function BookingConfirm() {
       time: selectedTime,
     };
     console.log('Booking payload', payload);
-    // clear cart, then show success modal. Keep confirm panel mounted until user closes success.
     dispatch({ type: 'CLEAR' });
     setShowSuccess(true);
   }
 
   function closeSuccess() {
     setShowSuccess(false);
-    // close panels after success acknowledged
     dispatch({ type: 'CLOSE_CONFIRM' });
     dispatch({ type: 'SET_OPEN', open: false });
   }
@@ -143,7 +141,6 @@ export default function BookingConfirm() {
         </div>
       </div>
 
-      {/* Success modal shown on top of confirm panel */}
       {showSuccess && (
         <div className='fixed inset-0 flex items-center justify-center z-70'>
           <div
