@@ -51,7 +51,7 @@ export default function App() {
       <div className='min-h-screen text-white bg-brand-900'>
         {/* Global background: image + continuous brand gradient for “liền lạc” feel */}
         <div className='relative'>
-          <div className='absolute inset-0 bg-[url("/service.png")] bg-cover bg-center opacity-60' />
+          <div className='absolute inset-0 bg-[url("/assets/serrvices.png")] bg-cover bg-center opacity-60' />
           <div className='absolute inset-0 bg-gradient-to-b from-brand-800/70 via-brand-700/35 to-brand-900/95' />
           <div className='absolute inset-0 bg-[radial-gradient(80%_60%_at_50%_0%,rgba(236,220,203,0.14)_0%,rgba(58,34,20,0)_55%)]' />
 
